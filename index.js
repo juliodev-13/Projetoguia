@@ -6,8 +6,13 @@ app.set('view engine','ejs')
 app.get("/",(req, res) =>{
     var nome = "Julio"
     var lang = "Javascript"
-    res.render("index.ejs")
-        nome = nome,
-        lang = lang
+    res.render("index",{
+
+        nome,
+        lang,
+        empresa:"Guia de perguntas",
+        inscritos: 8000
+
+    })
 })
 app.listen(8000,()=>{console.log("app rodando!")})
