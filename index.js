@@ -4,20 +4,7 @@ const app = express()
 app.set('view engine','ejs')
 app.use(express.static('public'))
 
-app.get("/:nome/:lang",(req, res) =>{
-    var nome = req.params.nome
-    var lang = req.params.lang
-    var exibirMsg = true
-    
-    var produtos = [
-        {nome: "Doritos R$", preço : 6.49},
-        {nome: "Coca-cola R$", preço : 5.47 },
-        {nome: "Leite R$", preço : 3.89},
-        {nome: "Carne kg R$", preço : 32.45},
-        {nome: "Redbull R$", preço : 15.00},
-        {nome: "Nescau R$", preço : 7.99}
-    ]
-    
+app.get("/",(req, res) =>{
     
     res.render("index",{
 
